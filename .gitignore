@@ -2,3 +2,4 @@ src/*.o
 src/*.sh
 app
 .vscode
+cmake-build-debug/
