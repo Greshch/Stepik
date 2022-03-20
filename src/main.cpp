@@ -13,31 +13,23 @@
 
 
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    int a, b, c;
-
-    cin >> a >> b >> c;
-    double d = (double) b * b - 4 * a * c;
-    if (d < 0)
+    char c = 0;
+    bool flag = true;
+    while (cin.get(c))
     {
-        cout << "No real roots\n";
-    }
-    else if (d == 0)
-    {
-        double root = (double) -b / 2 / a;
-        cout << root << " " << root << "\n";
-    }
-    else
-    {
-        d = sqrt(d);
-        double r1 = ((double) -b - d) / 2.0 / a;
-        double r2 = ((double) -b + d) / 2.0 / a;
-        cout << r1 << " " << r2 << "\n";
+        if (flag || c != ' ')
+        {
+            cout << c;
+            if (c == ' ')
+                flag = false;
+            else
+                flag = true;
+        }
     }
     
     return 0;
