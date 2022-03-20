@@ -1,3 +1,0 @@
-/home/dima/projects/Stepik/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dima/projects/Stepik/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dima/projects/Stepik/cmake-build-debug/CMakeFiles/app.dir

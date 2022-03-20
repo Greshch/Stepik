@@ -2,4 +2,5 @@ src/*.o
 src/*.sh
 app
 .vscode
+.idea/
 cmake-build-debug/
