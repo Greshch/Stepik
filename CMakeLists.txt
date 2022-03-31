@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3 FATAL_ERROR)
 
 #set src variables
 set(PROJECT_NAME app)
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/main.cpp include/header.h src/source.cpp)
 
 # устанавливаем название проекта
 project(${PROJECT_NAME})
