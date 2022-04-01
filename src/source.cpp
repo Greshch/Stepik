@@ -54,3 +54,9 @@ void print_array(int *a, unsigned int size)
     cout << endl;
 }
 
+unsigned strlen(const char *str)
+{
+    char const* p = str;
+    while (*p++);
+    return  p - str - 1;
+}

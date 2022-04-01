@@ -11,4 +11,6 @@ void rever_print_char(char const* s);
 void print_array(int a[], unsigned size);
 void rotate(int a[], unsigned size, int shift); //left loop shift array with it's size
 
+unsigned strlen(const char *str);
+
 #endif //APP_HEADER_H
