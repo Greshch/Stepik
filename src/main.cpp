@@ -4,8 +4,10 @@ using namespace std;
 
 int main()
 {
-    //rever_print_char("avx");
-    get_num_f(1);
-    cout << endl;
+    int arr[] = {1,2,3,4,5};
+    unsigned const SZ = sizeof arr / sizeof arr[0];
+    print_array(arr,SZ);
+    rotate(arr,SZ, 4);
+    print_array(arr,SZ);
     return 0;
 }

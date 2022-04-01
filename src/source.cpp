@@ -28,3 +28,29 @@ void rever_print_char(char const* s)
     cout << ch;
 }
 
+void rotate(int a[], unsigned size, int shift)
+{
+    shift %= size;
+    for (int j = 0; j < shift; ++j)
+    {
+        int first_element = a[0];
+        for (int i = 0; i < size - 1; ++i)
+        {
+            a[i] = a[i + 1];
+        }
+        a[size - 1] = first_element;
+    }
+
+}
+
+void print_array(int *a, unsigned int size)
+{
+    for (int i = 0; i < size; ++i)
+    {
+        cout << a[i] << " ";
+        if ((i + 1) % 10 == 0)
+            cout << endl;
+    }
+    cout << endl;
+}
+
