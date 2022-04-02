@@ -60,3 +60,39 @@ unsigned strlen(const char *str)
     while (*p++);
     return  p - str - 1;
 }
+
+int strstr(const char *text, const char *pattern)
+{
+    int len_pat = strlen(pattern);
+    int len_text = strlen(text);
+    int dif = len_text - len_pat;
+    if (dif < 0)
+    {
+        return -1;
+    }
+    else if (len_pat == 0)
+    {
+        return 0;
+    }
+
+    for (int j = 0, i = 0; i < len_pat && j < len_text; ++j)
+    {
+        if (text[j] == pattern[i])
+        {
+            ++i;
+            if (i == len_pat)
+            {
+                return j - len_pat + 1;
+            }
+        }
+        else if (text[j] == pattern[0])
+        {
+            i = 1;
+        }
+        else
+        {
+            i = 0;
+        }
+    }
+    return -1;
+}

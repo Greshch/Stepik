@@ -12,5 +12,7 @@ void print_array(int a[], unsigned size);
 void rotate(int a[], unsigned size, int shift); //left loop shift array with it's size
 
 unsigned strlen(const char *str);
+int strstr(const char *text, const char *pattern);
+
 
 #endif //APP_HEADER_H
