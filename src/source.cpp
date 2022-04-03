@@ -96,3 +96,40 @@ int strstr(const char *text, const char *pattern)
     }
     return -1;
 }
+
+char* copystr(char* dest, char const* src)
+{
+    while (*dest++ = *src++);
+    return dest;
+}
+
+char* catstr(char* dest, const char* src)
+{
+    copystr(dest + strlen(dest), src);
+    return dest;
+}
+
+char* getline()
+{
+    int len = 2;
+    char ch = 0;
+    char* buff = new char[len];
+    int i = 0;
+    while (cin.get(ch) && ch != '\n')
+    {
+        cout << ch;
+        ++i;
+        if (i == len - 1)
+        {
+            len *= 2;
+            char* tmp = new char[len];
+            copystr(tmp, buff);
+            delete[] buff;
+            buff = tmp;
+            //cout << "\n\t#len " << len << endl;
+        }
+    }
+    buff[i - 1] = '\0';
+    cout << "\n" << buff << endl;
+    return buff;
+}

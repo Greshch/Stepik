@@ -13,6 +13,8 @@ void rotate(int a[], unsigned size, int shift); //left loop shift array with it'
 
 unsigned strlen(const char *str);
 int strstr(const char *text, const char *pattern);
-
+char* copystr(char* dest, char const* src);
+char* catstr(char* dest, const char* src);
+char* getline();
 
 #endif //APP_HEADER_H
