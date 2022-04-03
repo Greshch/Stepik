@@ -150,3 +150,16 @@ void free_array2d(int** matrix, int row)
     delete[] matrix[0];
     delete[] matrix;
 }
+
+int ** transpose(const int * const * m, unsigned rows, unsigned cols)
+{
+    int** tran = create_array2d(cols, rows);
+    for (int i = 0; i < rows; ++i)
+    {
+        for (int j = 0; j < cols; ++j)
+        {
+            tran[j][i] = m[i][j];
+        }
+    }
+    return tran;
+}
