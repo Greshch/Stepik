@@ -17,4 +17,7 @@ char* copystr(char* dest, char const* src);
 char* catstr(char* dest, const char* src);
 char* getline();
 
+int** create_array2d(int row, int col);
+void free_array2d(int row);
+
 #endif //APP_HEADER_H

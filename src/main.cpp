@@ -4,6 +4,5 @@ using namespace std;
 
 int main()
 {
-    getline();
     return 0;
 }

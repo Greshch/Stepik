@@ -133,3 +133,20 @@ char* getline()
     cout << "\n" << buff << endl;
     return buff;
 }
+
+int **create_array2d(int row, int col)
+{
+    int** matrix = new int*[row];
+    matrix[0] = new int[row * col];
+    for (int i = 1; i < row; ++i)
+    {
+        matrix[i]  = matrix[0] + i*col;
+    }
+    return matrix;
+}
+
+void free_array2d(int** matrix, int row)
+{
+    delete[] matrix[0];
+    delete[] matrix;
+}
