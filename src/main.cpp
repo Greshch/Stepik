@@ -9,11 +9,9 @@ int main()
     int** a = create_array2d(ROWS, COLLS);
     set_arra2d_randomly(a, ROWS, COLLS);
     print_array2d(a, ROWS, COLLS);
-    int** b = transpose(a, ROWS, COLLS);
-    print_array2d(b, COLLS, ROWS);
-    free_array2d(b, ROWS);
+    swap_min(a, ROWS, COLLS);
+    print_array2d(a, ROWS, COLLS);
     free_array2d(a,ROWS);
-    b = nullptr;
     a = nullptr;
     return 0;
 }
