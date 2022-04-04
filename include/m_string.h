@@ -2,8 +2,8 @@
 // Created by dima on 31.03.2022.
 //
 
-#ifndef APP_HEADER_H
-#define APP_HEADER_H
+#ifndef APP_M_STRING_H
+#define APP_M_STRING_H
 
 void get_num_f(int n);
 void rever_print_char(char const* s);
@@ -17,8 +17,6 @@ char* copystr(char* dest, char const* src);
 char* catstr(char* dest, const char* src);
 char* getline();
 
-int** create_array2d(int row, int col);
-void free_array2d(int row);
-int ** transpose(const int * const * m, unsigned rows, unsigned cols);
 
-#endif //APP_HEADER_H
+
+#endif //APP_M_STRING_H

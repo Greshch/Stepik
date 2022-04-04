@@ -2,7 +2,7 @@
 // Created by dima on 31.03.2022.
 //
 
-#include "header.h"
+#include "m_string.h"
 #include <iostream>
 using namespace std;
 
@@ -132,34 +132,4 @@ char* getline()
     buff[i - 1] = '\0';
     cout << "\n" << buff << endl;
     return buff;
-}
-
-int **create_array2d(int row, int col)
-{
-    int** matrix = new int*[row];
-    matrix[0] = new int[row * col];
-    for (int i = 1; i < row; ++i)
-    {
-        matrix[i]  = matrix[0] + i*col;
-    }
-    return matrix;
-}
-
-void free_array2d(int** matrix, int row)
-{
-    delete[] matrix[0];
-    delete[] matrix;
-}
-
-int ** transpose(const int * const * m, unsigned rows, unsigned cols)
-{
-    int** tran = create_array2d(cols, rows);
-    for (int i = 0; i < rows; ++i)
-    {
-        for (int j = 0; j < cols; ++j)
-        {
-            tran[j][i] = m[i][j];
-        }
-    }
-    return tran;
 }
