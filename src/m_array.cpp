@@ -2,6 +2,8 @@
 // Created by dima on 04.04.2022.
 //
 #include "m_array.h"
+#include <iostream>
+#include <ctime>
 
 int **create_array2d(int row, int col)
 {
@@ -31,5 +33,30 @@ int ** transpose(const int * const * m, unsigned rows, unsigned cols)
         }
     }
     return tran;
+}
+
+void print_array2d(const int *const *m, unsigned int rows, unsigned int cols)
+{
+    using namespace std;
+    for (int i = 0; i < rows; ++i)
+    {
+        for (int j = 0; j < cols; ++j)
+        {
+            printf("%5i", m[i][j]);
+        }
+        printf("\n");
+    }printf("\n");
+}
+
+void set_arra2d_randomly(int **m, int rows, int cols)
+{
+    srand(time(nullptr));
+    for (int i = 0; i < rows; ++i)
+    {
+        for (int j = 0; j < cols; ++j)
+        {
+            m[i][j] = rand() % 100;
+        }
+    }
 }
 
